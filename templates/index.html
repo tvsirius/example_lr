@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1> <img src="/img/mit.png" alt="MIT Logo"> Linear Regression !</h1>
+    <br>
+    <h1> Results: {{ processed_data1 }}</h1>
+    <br>
+    <form action="/computation" method="post">
+        <label for="input1">Input data in the form (X1,Y1), (X2,Y2), (X3,Y3), ....:</label>
+        <input type="text" id="input1" name="input_data" required><br>
+        <label for="input2">Input degree:</label>
+        <input type="text" id="input2" name="input_degree" required><br>
+        <label for="input3">Input x val:</label>
+        <input type="text" id="input3" name="input_xval" required><br>            
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

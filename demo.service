@@ -1,0 +1,16 @@
+[Unit]
+Description=My Flask Application
+After=network.target
+
+[Service]
+# Replace with your username
+User=sirius7_ai
+
+# Replace with your app directory absolute path
+WorkingDirectory=/home/sirius7_ai/cloud_workshop/helloworld
+# 
+ExecStart=sudo venv/bin/python3 -m gunicorn -b 0.0.0.0:80 app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
