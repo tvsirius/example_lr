@@ -20,7 +20,7 @@ import flask
 from linear_regression import process_linear
 
 
-app = flask.Flask(__name__, static_folder='img')
+app = flask.Flask(__name__, static_folder='static')
 
 
 def my_basic_computation(data_string, degree_string, x_val: str) -> str:
@@ -85,4 +85,4 @@ def computation_page():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="127.0.0.1", port=8080, debug=True)
